@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <link rel="icon" href="images/icon_ico.ico">
+    <meta charset="UTF-8">
+   
+    <title>Comanda Alimentara</title>
+    <style> 
+        /*GLOBAL TAG*/
+        a:link {text-decoration: none;}  
+        a:hover {text-decoration:underline; color: rgb(216, 210, 250);} /* mouse peste link */
+        a:active {text-decoration:underline; color: rgb(166, 135, 250);} /* link selectat */
+        body {background-color: rgb(217, 252, 247);}
+        table {background-color: #53C643; margin: auto; width: 800px; padding: 10px; text-align: center;}
+        p {text-align: center;}
+        /*GLOBAL CLASS*/
+        #meniu {height: 615px;}
+        #intro {width: 400px; height: 200px;}
+        #comanda {background-color: #E15023; height: 10px;}
+        #termeni {text-align: right;}
+        /*GLOBAL ID*/
+        .inter {background-color:#E1964B; height: 10px;}
+        .forms {height: 100px;}
+
+    </style>
+</head>
+<body>
+    <!--bara de menu-->
+    <table><!--bara menu-->
+        <tr>
+            <td><img width="100" src="images/logo.jpg" alt="logotip"></td>
+            <td><h2><a href="index.html">Comanda</a></h2></td>
+            <td><h2><a href="terms.html" target="_blank">Livrare</a></h2></td>
+            <td><h2><a href="contacte.html" target="_blank">Contacte</a></h2></td>
+        </tr>
+    </table> 
+        <br>
+        <br>
+    
+    <!--cererea de comanda--> 
+<form action="confirmation.html">
+    <table id="meniu">
+        <tr>
+            <td id="intro">
+            
+                <h1>Salata "Cezar"</h1>
+                <hr>
+                file de pui, cașcaval „Parmigiano”, roșii „Cherry”, salată „Romano”, sos „Caesar”, crutoane
+                <hr>
+               <h2> &#9878; 270 gr.   &#128176; 75 MDL</h2>
+
+            </td>
+            <!--imaginea salat cezar-->
+            <td rowspan="7"><img width="400" height="680" src="images/salat_cesar.jpeg" alt="salata cesar"></td>
+        </tr>
+        <tr id="comanda">
+            <td><h2>Cerere de comanda</h2></td>
+        </tr>
+        <tr>
+            <td class="forms">
+                <label for="name">Numele:</label>
+                <input id="name" type="text" placeholder="ex. Ana" required pattern=".{3,}" title="Numele nu poate contine mai putin de 3 litere" >
+            <br><br>
+            <label for="phone">Nr. de contact: +373</label>
+            <input id="phone" type="tel" placeholder="ex. 68978544" required pattern=".{8,}" title="8 cifre">
+            </td>
+            
+        </tr> 
+        <tr class="inter">
+            <td></td> 
+        </tr>
+        <tr>
+            <td class="forms">
+                <h4>Adresa livrarii:</h4>
+                <label for="city">Localitatea:</label>
+                <select id="city">
+                    <option>Chisinau</option>
+                    <option>Balti</option>
+                    <option>Orhei</option>
+                    <option>Cahul</option>
+                </select>
+                <br>
+                <br>
+               <label for="adresa">strada/bloc:</label> 
+               <input id="adresa" type="text" required placeholder="ex. str. I. Vieru 28, ap. 15">
+            <br><br>
+            <label for="clock">Ora livrarii:</label>
+            <input id="clock" type="time" required>
+            <br><br>
+            </td>
+            
+        </tr>
+        <tr class="inter">
+            <td></td>   
+        </tr>
+        <tr>
+            <td id="termeni">
+                <label for="terms">Sunt de acord cu <a href="terms.html" target="_blank"><u>termenii si conditiile livrarii</u></a></label>
+                <input id="terms" type="checkbox" required>
+                <br><br>
+                <button>Confirma comanda</button>
+            </td>
+            
+        </tr>
+        
+    </table>    
+</form>
+<br>
+<br>
+<!--bara de jos-->
+<hr>
+<p>Salat Restaurant &reg; 2020 | contacte: <a href="contacte.html" target="_blank">+3736112233</a>
+</p>
+<hr>
+</body>
+</html>
